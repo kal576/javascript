@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    text-align: center;
+    background-color:  rgba(82, 82, 233, 0.479);
+}
+
+.game-mode, .difficulty{
+    display: flex;
+    align-items: center;/*centers items horizontally*/
+    justify-content: center;/*centers items vertically*/
+    gap: 20px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.difficulty{
+   display: none;
+}
+
+.single, .multi, .easy, .normal, .hard{
+padding: 10px 20px;
+width: 150px;
+height: 60px;
+border-radius: 10px;
+border: none;
+background-color: rgb(215, 230, 229);
+box-shadow: 100px;
+font-size: 1.5rem;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: italic;
+font-weight: bold;
+}
+
+.landing{
+    display: none;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.players{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+p{
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px;
+}
+
+.back{
+    border: none;
+    background-color: rgb(29, 22, 22, 0.1);
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#player1, #player2{
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    margin: 10px;
+}
+
+#player1:focus, #player2:focus{
+    outline: none;
+    border: 1px black;
+}
+
+.btn{
+    margin: 25px;
+    width: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+.btn:hover, .single:hover, .multi:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.easy:hover, .normal:hover, .hard:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.game-page{
+    display: none;
+}
+
+.button{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+}
+
+
+
+h1{
+    margin: 20px;
+    font-size: 3rem;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: beige;
+    border: 2px solid rgb(21, 21, 223);
+    align-items: center;
+}
+
+.cell.taken{
+    cursor: not-allowed;
+}
+
+.msg{
+    font-size: 1rem;
+    margin: 20px 0px;
+}
+
+.cell.winning {
+    background-color: lightgreen;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.cell.draw{
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bold;
+}
+
+
+.restart, .home{
+    padding: 10px 20px;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(215, 230, 229);
+    box-shadow: 100px;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.restart:hover, .home:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+

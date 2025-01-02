@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css"> 
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="game-mode">
+        <h1>Choose Playing Mode</h1>
+
+<button class="single">Single</button>
+        <button class="multi">Two Player</button>
+    </div>
+
+    <div class="landing">
+        <h1>Enter Player Names</h1>
+        <form class="players">
+            <div class="p">
+                <p>Player 1</p>
+                    <input type="text" id = "player1" placeholder="Player1 Name">
+            </div>
+    
+            <div class="p">
+                <p>Player 2</p>
+                    <input type="text" id = "player2" placeholder="Player2 Name">
+            </div>
+    
+        </form>
+        
+        <button class = "btn" type = "submit"> Start Game</button>
+        <button class = "back" style="cursor: pointer;"> <- </button>
+    </div>
+    
+    <div class="difficulty">
+        <h1> Choose Difficulty</h1>
+        <button type="submit" class="easy">Easy</button>
+        <button type="submit" class="normal">Normal</button>
+        <button type="submit" class="hard">Hard</button>
+    </div>
+    <div class="game-page">
+        <h1>
+            Tic Tac Toe
+        </h1>
+
+        <div class="scores">
+            <span class="player1-score">Player 1: 0</span>
+            <span class="player2-score">Player 2: 0</span>
+        </div>
+        
+        <div class="board"></div>
+        <p class="msg"></p>
+
+        <div class="button">
+            <button class="restart"> Restart </button>
+            <button class="home"> Home </button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

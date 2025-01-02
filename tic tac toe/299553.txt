@@ -1,0 +1,14 @@
+299553 - opening
+
+20l - 7
+10l - 5
+5l - 9
+1l - 10
+
+299793 - closing
+
+litres sold : 240
+
+cash 1110
+mpesa 1125
+
