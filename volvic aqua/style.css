@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(0, 183, 255), rgba(0, 217, 255, 0.932), rgba(36, 255, 255, 0.788));
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding: 5px;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date {
+    margin: 20px 0;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(18, 6, 19);
+    top: 60px;
+    left: 50%;
+   
+}
+
+h2 {
+    font-size: 2rem;
+    
+}
+
+label {
+    font-size: 1.3rem;
+    align-self: flex-start;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.readings {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.reading {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#opening, #closing, .bottles input {
+    width: 40%;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 4px;
+    margin-left: 10px;
+}
+
+.bottles input {
+    align-self: center;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.litres {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.bottles {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bottles label {
+    font-size: 1.3rem;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.bottles button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.calculate-button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bottles button:hover, .calculate-button:hover {
+    background-color: #0056b3;
+}
+
+.sales p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: 10ps;
+}

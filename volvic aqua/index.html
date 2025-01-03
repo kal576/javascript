@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volvic Aqua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Volvic Aqua</h1>
+    <div class="date" style="text-align: center;">
+        <label for="recordDate"> Date: </label>
+        <input type="date" id="recordDate" onchange="displayRecordByDate()">
+    </div>
+    <h2>Meter Readings</h2>
+    <div class="readings">
+        <div class="reading">
+            <label for="opening">Opening Meter Reading: </label>
+            <input type="number" id="opening" placeholder="Enter Opening Meter Reading">
+        </div>
+        <div>
+            <label for="closing">Closing Meter Reading: </label>
+            <input type="number" id="closing" placeholder="Enter Closing Meter Reading">
+        </div>
+    </div>
+        
+    <h2>Bottles Refilled</h2>
+
+    <div class="litres">
+        <div class="bottles">
+            <label for="20l">20 Litres: </label>
+            <input type="number" id="20l">
+            <button onclick="updateBottleCount('20l', 1)">+</button>
+            <button onclick="updateBottleCount('20l', -1)">-</button>
+            <span id="totalSold20l"></span>
+        </div>
+    
+        <div class="bottles">
+            <label for="10l">10 Litres: </label>
+            <input type="number" id="10l">
+            <button onclick="updateBottleCount('10l', 1)">+</button>
+            <button onclick="updateBottleCount('10l', -1)">-</button>
+            <span id="totalSold10l"></span>
+        </div>
+    
+        <div class="bottles">
+            <label for="5l">5 Litres: </label>
+            <input type="number" id="5l">
+            <button onclick="updateBottleCount('5l', 1)">+</button>
+            <button onclick="updateBottleCount('5l', -1)">-</button>
+            <span id="totalSold5l"></span>
+        </div>
+    
+        <div class="bottles">
+            <label for="1l">1 Litre: </label>
+            <input type="number" id="1l">
+            <button onclick="updateBottleCount('1l', 1)">+</button> 
+            <button onclick="updateBottleCount('1l', -1)">-</button>
+            <span id="totalSold1l"></span>
+        </div>    
+    </div>
+   
+    <div class="sales">
+        <p>Mpesa Sales: 
+            <span id="mpesaSale" value="0"> 0 Ksh</span>
+        </p>
+
+        <p>Cash Sales: 
+            <span id="cashSale">0 Ksh</span>
+        </p>
+    </div>
+
+    <div id ="paymentModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Select Payment Method</h2>
+            <label for="">
+                <input type="radio" id="cash">Cash
+            </label>
+            <label for="">
+                <input type="radio" id="mpesa">Mpesa
+            </label>
+            <button onclick="confirm()">Confirm</button>
+        </div>
+    </div>
+
+    <button class="calculate-button" onclick="calculate()"> Calculate</button>
+   <!--<button onclick="saveRecord()">Save Record</button>
+    <button onclick="deleteRecord()">Delete Record</button>--> 
+    <div id="results" class="result" style="display: none;">
+            <p>
+                Meter Difference: <span id = "meterDifference">0</span>
+            </p>
+       
+            <p>
+                Total Sales: <span id = "totalSales">0 Ksh</span>
+            </p>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
