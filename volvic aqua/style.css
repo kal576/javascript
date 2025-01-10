@@ -11,32 +11,35 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0 auto;
-    background: linear-gradient(to right, rgb(0, 183, 255), rgba(0, 217, 255, 0.932), rgba(36, 255, 255, 0.788));
+    background: linear-gradient(to right, #b3c3f3, #c6d2f6, #d9e1f9);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 2rem;
 }
 
 h1 {
-    font-size: 3.5rem;
     padding: 5px;
-    margin: 0;
-    position: sticky;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
 }
 
 .date {
-    margin: 20px 0;
+    margin: 20px;
     font-weight: bold;
     font-style: italic;
     color: rgb(18, 6, 19);
     top: 60px;
     left: 50%;
-   
+    justify-content: center;
 }
 
 h2 {
     font-size: 2rem;
-    
+    position: relative;
 }
 
 label {
@@ -49,13 +52,17 @@ label {
 .readings {
     display: flex;
     flex-direction: column;
- 
 }
 
 .reading {
     display: flex;
     align-items: center;
     margin: 10px 0;
+}
+
+.reading input {
+    outline: none;
+    border: none;
 }
 
 #opening, #closing, .bottles input {
@@ -72,11 +79,30 @@ label {
     align-self: center;
     width: 60px;
     margin-right: 10px;
+    outline: none;
+    border: none;
+}
+
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
 }
 
 .litres {
     display: flex;
     flex-direction: column;
+    margin: 10px;
+    align-items: end;
+    border: 3px solid #0056b3;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px #0056b3;
+}
+
+.litres h2 { 
+    text-align: center;
+    width: 100%;
+    font-size: 1.7rem;
     margin: 10px;
 }
 
@@ -86,10 +112,11 @@ label {
     flex-direction: row;
 }
 
-.bottles label {
+.bottles span {
     font-size: 1.3rem;
-    width: 150px;
-    margin-right: 10px;
+    margin: 8px;
+    text-align: right;
+    gap:10px;
 }
 
 .bottles button {
@@ -104,7 +131,21 @@ label {
     cursor: pointer;
 }
 
-.calculate-button{
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bottles .confirm {
+    width: 80px;
+    padding: 10px 5px;
+    font-size: 1rem;
+    gap: 5px;
+}
+
+.calculate-button, .save-button, .expenses-button {
     width: 100px;
     height: 50px;
     border: none;
@@ -117,8 +158,71 @@ label {
     padding: 10px;
 }
 
-.bottles button:hover, .calculate-button:hover {
+.bottles button:hover, .calculate-button:hover, .row button:hover, .expenses-button:hover, .save-button:hover {
     background-color: #0056b3;
+}
+
+.expenses {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    border: 3px solid #0056b3;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: -3px 3px 5px #0056b3;
+}
+
+.expenses h2 {
+    font-size: 2rem;
+}
+
+.row input {
+    width: 100%;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    flex: 1;
+    position: relative;
+    display: inline;
+    padding-right: 40px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
 .sales p {
@@ -126,4 +230,75 @@ label {
     font-size: 1.3rem;
     margin: 5px;
     padding: 10ps;
+}
+
+.modal, .result {
+    width: 400px;
+    background: #89e9d9;
+    border-radius: 9px;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal h2 {
+    margin: 10px 0px;
+}
+.modal input {
+    gap: 5px;
+}
+.modal button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    height: 50%;
+    top: 50%; /*position vertically*/
+    left: 50%; /*position horizontally*/
+    transform: translate(-50%, -30%); /*offsets the modal within its container, 50% of its width to the left and 30% of its height to the right*/
+    text-align: center;
+    font-size: 1.4rem;
+    justify-content: center; /*centers horizontally*/
+    align-items: center; /*centers vertically*/
+    position: absolute;
+    z-index: 10; /*ensures the modal appears above the rest of the content*/
+}
+
+.result p {
+    font-weight: bold;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.result .close {
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: red;
+    transform: scale(1.1);
 }
